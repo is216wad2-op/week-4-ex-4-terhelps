@@ -56,16 +56,12 @@
             var li = document.createElement("li")
             var textnode = document.createTextNode(input.value);
             li.appendChild(textnode);
+
             var deleteButton = document.createElement("button");
             deleteButton.textContent = "delete";
-            deleteButton.onclick = function() {
-               remove(this.parentNode);
-            };
-
-            // Append button to li
+            deleteButton.onclick = remove(this.parentNode);
             li.appendChild(deleteButton);
             ul.appendChild(li);
-
          }
 
          function remove(object){
